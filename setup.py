@@ -15,7 +15,7 @@ site.ENABLE_USER_SITE = "--user" in sys.argv[1:]
 overlay_warning = False
 if "install" in sys.argv:
     lib_paths = [get_python_lib()]
-    if lib_paths[0].startswith("/usr/lib/"):
+    if lib_paths[0].startswith("/usr/lib64/"):
         # We have to try also with an explicit prefix of /usr/local in order to
         # catch Debian's custom user site-packages directory.
         lib_paths.append(get_python_lib(prefix="/usr/local"))
